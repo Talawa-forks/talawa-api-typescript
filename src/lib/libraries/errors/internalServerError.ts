@@ -1,5 +1,8 @@
 import { ApplicationError } from "./applicationError";
-
+/**
+ * @class
+ * This class detects internal server errors and sends those errors to the superclass ApplicationError.
+ */
 export class InternalServerError extends ApplicationError {
   constructor(
     message: string = "Internal Server Error!",

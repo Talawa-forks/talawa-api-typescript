@@ -1,5 +1,8 @@
 import { ApplicationError } from "./applicationError";
-
+/**
+ * @class
+ * This class detects unauthorized errors and sends those errors to the superclass ApplicationError.
+ */
 export class UnauthorizedError extends ApplicationError {
   constructor(
     message: string = "UnauthorizedError",
