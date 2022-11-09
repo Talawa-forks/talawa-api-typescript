@@ -8,6 +8,12 @@ import {
 import { errors, requestContext } from "../libraries";
 
 export class AuthenticationDirective extends SchemaDirectiveVisitor {
+  /**
+   * This function throws an Unauthenticated error if the context is expired or not authenticated.
+   * @param {GraphQLField} field
+   * @param {object} _details
+   * @return {function} resolver
+   */
   visitFieldDefinition(
     field: GraphQLField<any, any>,
     /*
