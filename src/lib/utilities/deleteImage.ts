@@ -3,6 +3,13 @@ import { logger } from "../libraries";
 import { ImageHash } from "../models";
 import { reuploadDuplicateCheck } from "./reuploadDuplicateCheck";
 
+/**
+ * This function deletes an image if it is only used once.
+ * It is also ensured that the image hash isn't used by multiple users/organization before deleting it
+ * After deleting the image, the number of uses of the hashed image are decremented by one.
+ * @param {string} imageToBeDeleted - Path of image
+ * @param {string} imageBelongingToItem - Does image belong to an item
+ */
 export const deleteImage = async (
   imageToBeDeleted: string,
   imageBelongingToItem?: string
