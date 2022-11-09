@@ -11,7 +11,16 @@ export interface Interface_DirectChat {
   organization: PopulatedDoc<Interface_Organization & Document>;
   status: string;
 }
-
+/**
+ * @name directChatSchema
+ * @function
+ * @description This is the Structure of the direct chat.
+ * @param {Schema.Types.ObjectId} users Users of the chat
+ * @param {Schema.Types.ObjectId} messages Messages
+ * @param {Schema.Types.ObjectId} creator Creator of the chat
+ * @param {Schema.Types.ObjectId} organization Organization
+ * @param {String} status whether the chat is active, blocked or deleted.
+ */
 const directChatSchema = new Schema({
   users: [
     {

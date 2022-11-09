@@ -9,7 +9,15 @@ export interface Interface_UserAttende {
   status: string;
   createdAt: Date;
 }
-
+/**
+ * @name userAttendeSchema
+ * @function
+ * @description This is the Structure of the User Attendee
+ * @param {String} userId User-id
+ * @param {Schema.Types.ObjectId} user User details
+ * @param {String} status whether the User is active, blocked, or delete
+ * @param {Date} createdAt Created Date
+ */
 const userAttendeSchema = new Schema({
   userId: {
     type: String,
@@ -56,7 +64,31 @@ export interface Interface_Event {
   tasks: Array<PopulatedDoc<Interface_Task & Document>>;
   status: string;
 }
-
+/**
+ * @name eventSchema
+ * @function
+ * @description This is the Structure of the Event
+ * @param {String} title Title of the event
+ * @param {String} description Description of the event
+ * @param {String} attendees Attendees
+ * @param {String} location Location of the event
+ * @param {Number} latitude Latitude
+ * @param {Number} longitude Longitude
+ * @param {Boolean} recurring Is the event recurring
+ * @param {Boolean} allDay Is the event occuring all day
+ * @param {String} startDate Start Date
+ * @param {String} endDate End date
+ * @param {String} startTime Start Time
+ * @param {string} endTime End Time
+ * @param {string} recurrance Periodicity of recurrance of the event
+ * @param {Boolean} isPublic Is the event public
+ * @param {Boolean} isRegisterable Is the event Registrable
+ * @param {Schema.Types.ObjectId} creator Creator of the event
+ * @param {Schema.Types.ObjectId[]} admins Admins
+ * @param {Schema.Types.ObjectId} organization Organization
+ * @param {Schema.Types.ObjectId} tasks Tasks
+ * @param {String} status whether the event is active, blocked, or deleted.
+ */
 const eventSchema = new Schema({
   title: {
     type: String,

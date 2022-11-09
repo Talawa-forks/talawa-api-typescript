@@ -11,7 +11,16 @@ export interface Interface_Group {
   status: string;
   admins: Array<PopulatedDoc<Interface_User & Document>>;
 }
-
+/**
+ * @name groupSchema
+ * @function
+ * @description This is the structure of a group
+ * @param {String} title Title
+ * @param {String} description Description
+ * @param {Date} createdAt Created at Date
+ * @param {String} status Status
+ * @param {Schema.Types.ObjectId[]} admins Admins
+ */
 const groupSchema = new Schema({
   title: {
     type: String,

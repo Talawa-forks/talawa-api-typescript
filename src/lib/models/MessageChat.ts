@@ -9,7 +9,16 @@ export interface Interface_MessageChat {
   receiver: PopulatedDoc<Interface_User & Document>;
   createdAt: Date;
 }
-
+/**
+ * @name messageChatSchema
+ * @function
+ * @description This the structure of a chat
+ * @param {string} message Chat message
+ * @param {boolean} languageBarrier
+ * @param {Schema.Types.ObjectId} sender Sender
+ * @param {Schema.Types.ObjectId} receiver Receiver
+ * @param {Date} createdAt Date when the chat was created
+ */
 const messageChatSchema = new Schema({
   message: {
     type: String,

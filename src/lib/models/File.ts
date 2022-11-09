@@ -11,7 +11,18 @@ export interface Interface_File {
   contentType: string | undefined;
   status: string;
 }
-
+/**
+ * @name fileSchema
+ * @function
+ * @description This is the structure of a file
+ * @param {String} name Name
+ * @param {String} url URL
+ * @param {Number} size Size
+ * @param {String} secret Secret
+ * @param {Date} createdAt Created at Date
+ * @param {String} contentType Content Type
+ * @param {String} status Status
+ */
 const fileSchema = new Schema({
   name: {
     type: String,

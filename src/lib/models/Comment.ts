@@ -12,7 +12,18 @@ export interface Interface_Comment {
   likeCount: number;
   status: string;
 }
-
+/**
+ * @name commentSchema
+ * @function
+ * @description This is the Structure of the Comments
+ * @param {string} text Text
+ * @param {Date} createdAt Date when the comment was created
+ * @param {Schema.Types.ObjectId} creator Creator of the comment
+ * @param {Schema.Types.ObjectId} post Post to which the comment has been made
+ * @param {Schema.Types.ObjectId} likedBy Liked by whom
+ * @param {Number} likeCount No of likes
+ * @param {string} status whether the comment is active, blocked or deleted.
+ */
 const commentSchema = new Schema({
   text: {
     type: String,
